@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/public'));
 
 // Start listening on specified port (default is 3000)
 server.listen(PORT, function() {
-  console.log('Listening on port'+ PORT + '...');
+  console.log('Listening on port'+ PORT + '3000');
 });
 
 /******************************************************************************************************/
@@ -31,7 +31,7 @@ io.on('connection', function(socket ) {
   /************************* SENDING    MESSAGE TO CLIENT *************************/
 
   // Send any messages that are broadcast   from the server to the client
-  socket.broadcast.emit('   new_    ', 'Hello from the server');
+  socket.broadcast.emit('new_', 'Hello from the server');
 
   /************************ RECEIVING   MESSAGE FROM CLIENT *************************/
 
